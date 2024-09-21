@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MBTI테스트</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>MBTI 테스트</h1>
+      <form id="quiz-form">
+        <div class="question">
+          <p>Q. 아침에 일어나자마자 가장 먼저 하는 일은?</p>
+          <label
+            ><input type="radio" name="q1" value="E" /> 휴대폰 확인하기</label
+          >
+          <label><input type="radio" name="q1" value="I" /> 커피 마시기</label>
+          <label><input type="radio" name="q1" value="S" /> 운동하기</label>
+          <label><input type="radio" name="q1" value="N" /> 잠 더 자기</label>
+        </div>
+
+        <div class="question">
+          <p>Q. 주말에 주로 하는 일은?</p>
+          <label><input type="radio" name="q2" value="E" /> 친구 만나기</label>
+          <label><input type="radio" name="q2" value="I" /> 집에서 쉬기</label>
+          <label><input type="radio" name="q2" value="S" /> 여행 가기</label>
+          <label
+            ><input type="radio" name="q2" value="N" /> 취미 활동 하기</label
+          >
+        </div>
+
+        <div class="question">
+          <p>Q. 일을 할 때 가장 중요한 것은?</p>
+          <label><input type="radio" name="q3" value="T" /> 효율성</label>
+          <label><input type="radio" name="q3" value="F" /> 팀워크</label>
+          <label><input type="radio" name="q3" value="J" /> 계획성</label>
+          <label><input type="radio" name="q3" value="P" /> 유연성</label>
+        </div>
+
+        <div class="question">
+          <p>
+            Q. 집 근처에 새로 생긴 카페가 궁금하다. 당신은 어떻게 할 것인가?
+          </p>
+          <label
+            ><input type="radio" name="q4" value="J" />카페 운영 시간과 날짜를
+            체크하고, 카페를 언제갈지 계획을 세워본다.</label
+          >
+          <label
+            ><input type="radio" name="q4" value="P" />'너무 궁금해, 지금 할
+            것도 없는데 카페나 가보자!'하며 바로 카페로 가본다.</label
+          >
+        </div>
+        <div class="question">
+          <p>
+            Q. 친구가 속상한 일이 있어 꺼이꺼이 울면서 내게 무슨 일이 있었는지
+            설명하려고한다. 근데 친구가 우는 소리에 뭐라고 말하는지 잘 들리지
+            않는다. 당신의 할 말은?
+          </p>
+          <label
+            ><input type="radio" name="q5" value="T" />'야! 무슨일이야! 좀
+            추스리고 천천히 말해봐.'
+          </label>
+          <label
+            ><input type="radio" name="q5" value="F" />'야~ 괜찮아?? 뭐땜에
+            그래~~ 아이고 ㅠㅠ 속상한 일 있었구나ㅠㅠ(휴지로 눈물
+            닦아주면서)'</label
+          >
+        </div>
+        <button id="submit-button" type="button" onclick="calculateResult()">결과 확인하기</button>
+      </form>
+      <div id="result" class="hide">
+        <h2>당신의 성격 유형은?</h2>
+        <p id="result-text">결과가 여기에 표시됩니다.</p>
+        <button onclick="resetQuiz()">다시 시작하기</button>
+      </div>
+    </div>
+  </body>
+</html>
